@@ -1,0 +1,43 @@
+{
+  "name": "focoos",
+  "version": "1.0.0",
+  "description": "a simple api for todo list application",
+  "main": "server.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch server.ts",
+    "db:start": "docker-compose up -d",
+    "db:pull": "npx prisma db pull",
+    "db:push": "npx prisma db push",
+    "db:studio": "npx prisma studio",
+    "db:generate": "npx prisma generate",
+    "db:migrate": "npx prisma migrate dev",
+    "db:reset": "npx prisma migrate reset"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AldairAvelino/focoos_api.git"
+  },
+  "keywords": [
+    "api",
+    "todo",
+    "backend"
+  ],
+  "author": "Aldair Avelino",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/AldairAvelino/focoos_api/issues"
+  },
+  "homepage": "https://github.com/AldairAvelino/focoos_api#readme",
+  "devDependencies": {
+    "@types/express": "^5.0.5",
+    "prisma": "^6.19.0",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.19.0",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0"
+  }
+}
