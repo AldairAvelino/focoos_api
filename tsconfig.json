@@ -9,12 +9,14 @@
 
     "baseUrl": "./src",
     "paths": {
+      "@generated/*": ["./../generated/client/*"],
       "@db/*": ["db/*"],
       "@repositories/*": ["./repositories/*"],
       "@controllers/*": ["./controllers/*"],
       "@services/*": ["./services/*"],
-      "@middlewares": ["./middlewares/*"],
-      "@interfaces": ["./interfaces/*"],
+      "@middlewares/*": ["./middlewares/*"],
+      "@interfaces/*": ["./interfaces/*"],
+      "@routes/*": ["./routes/*"],
     },
 
     // Other Outputs
@@ -43,6 +45,6 @@
     "moduleDetection": "force",
     "skipLibCheck": true,
   },
-  "include": ["src/**/*.ts"],
+  "include": ["src/**/*.ts", "server.ts", "generated/client/**/*.ts"],
   "exclude": ["node_modules"]
 }
