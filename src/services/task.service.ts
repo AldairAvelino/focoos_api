@@ -1,4 +1,4 @@
-import { TaskRepository } from "@repositories/task.repositoty";
+import { TaskRepository } from "@repositories/task.repository";
 
 export class TaskService {
   private taskRepository = TaskRepository
