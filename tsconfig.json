@@ -1,10 +1,21 @@
 {
   "compilerOptions": {
+    "ignoreDeprecations": "6.0",
     "rootDir": "./",
     "outDir": "./dist",
     "module": "nodenext",
     "target": "esnext",
     "types": [],
+
+    "baseUrl": "./src",
+    "paths": {
+      "@db/*": ["db/*"],
+      "@repositories/*": ["./repositories/*"],
+      "@controllers/*": ["./controllers/*"],
+      "@services/*": ["./services/*"],
+      "@middlewares": ["./middlewares/*"],
+      "@interfaces": ["./interfaces/*"],
+    },
 
     // Other Outputs
     "sourceMap": true,
@@ -26,12 +37,12 @@
     // Recommended Options
     "strict": true,
     "jsx": "react-jsx",
-    "verbatimModuleSyntax": true,
+    "verbatimModuleSyntax": false,
     "isolatedModules": true,
     "noUncheckedSideEffectImports": true,
     "moduleDetection": "force",
     "skipLibCheck": true,
   },
-  "include": ["./"],
+  "include": ["src/**/*.ts"],
   "exclude": ["node_modules"]
 }
