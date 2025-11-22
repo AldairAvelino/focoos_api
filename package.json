@@ -4,6 +4,7 @@
   "description": "a simple api for todo list application",
   "main": "server.ts",
   "scripts": {
+    "start": "node ./dist/server.js",
     "dev": "tsx watch server.ts",
     "db:start": "docker-compose up -d",
     "db:pull": "npx prisma db pull",
@@ -12,7 +13,7 @@
     "db:generate": "npx prisma generate",
     "db:migrate": "npx prisma migrate dev --skip-generate",
     "db:reset": "npx prisma migrate reset --skip-generate",
-    "build": "npx tsc"
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
